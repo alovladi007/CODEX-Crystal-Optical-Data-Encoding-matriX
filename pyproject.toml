@@ -1,13 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "repl-nix-workspace"
-version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.12"
-dependencies = [
-    "click>=8.2.1",
-    "matplotlib>=3.10.6",
-    "numpy>=2.3.2",
-    "pytest>=8.4.2",
-    "reedsolo>=1.7.0",
-    "zstandard>=0.24.0",
+name = "crystal-archive"
+version = "1.0.0"
+description = "Ultra-durable archival stack for 5D optical crystal media"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Crystal Archive Team", email = "team@crystal-archive.io"}
 ]
+dependencies = [
+    "numpy>=1.21.0",
+    "matplotlib>=3.5.0",
+    "zstandard>=0.18.0",
+    "pynacl>=1.5.0",
+    "reedsolo>=1.5.4",
+    "click>=8.0.0",
+    "scipy>=1.9.0",
+    "pytest>=8.4.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "mypy>=0.991",
+    "ruff>=0.0.261"
+]
+
+[project.scripts]
+crystal-archive = "crystal_archive.cli.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
