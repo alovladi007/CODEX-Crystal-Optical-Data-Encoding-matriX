@@ -1,0 +1,13 @@
+[project]
+name = "repl-nix-workspace"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.2.1",
+    "matplotlib>=3.10.6",
+    "numpy>=2.3.2",
+    "pytest>=8.4.2",
+    "reedsolo>=1.7.0",
+    "zstandard>=0.24.0",
+]
