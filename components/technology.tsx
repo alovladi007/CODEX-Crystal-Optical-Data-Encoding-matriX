@@ -120,10 +120,16 @@ export function Technology() {
   return (
     <section id="technology" className="section relative overflow-hidden">
       {/* Technology Background Pattern */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-25">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/images/backgrounds/tech-circuit.svg)',
+            backgroundSize: 'cover'
+          }}
+        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(139,92,246,0.05)_50%,_transparent_100%)]" />
-        <div className="absolute inset-0 bg-[conic-gradient(from_180deg_at_50%_50%,_transparent_0deg,_rgba(59,130,246,0.08)_90deg,_transparent_180deg,_rgba(139,92,246,0.08)_270deg,_transparent_360deg)]" />
       </div>
       
       {/* Circuit Pattern Overlay */}

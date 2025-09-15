@@ -88,10 +88,16 @@ export function Features() {
   return (
     <section id="features" className="section relative overflow-hidden">
       {/* Data Visualization Background */}
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-20">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/images/backgrounds/data-grid.svg)',
+            backgroundSize: 'cover'
+          }}
+        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(135deg,_transparent_0%,_rgba(14,165,233,0.05)_25%,_transparent_50%,_rgba(59,130,246,0.05)_75%,_transparent_100%)]" />
-        <div className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,_transparent_0deg,_rgba(14,165,233,0.06)_120deg,_transparent_240deg,_rgba(59,130,246,0.06)_360deg)]" />
       </div>
       
       {/* Grid Pattern Overlay */}

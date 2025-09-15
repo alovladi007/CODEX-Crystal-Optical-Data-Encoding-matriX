@@ -25,10 +25,16 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900" />
       
       {/* Crystal Pattern Background */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-50">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/images/hero/crystal-hero.svg)',
+            backgroundSize: 'cover'
+          }}
+        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,_transparent_0deg,_rgba(59,130,246,0.1)_60deg,_transparent_120deg,_rgba(139,92,246,0.1)_180deg,_transparent_240deg,_rgba(14,165,233,0.1)_300deg,_transparent_360deg)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,_transparent_25%,_rgba(59,130,246,0.05)_25%,_rgba(59,130,246,0.05)_50%,_transparent_50%,_transparent_75%,_rgba(139,92,246,0.05)_75%)] bg-[length:20px_20px]" />
       </div>
       
       {/* Floating Crystal Elements */}

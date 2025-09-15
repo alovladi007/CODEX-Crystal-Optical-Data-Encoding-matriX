@@ -1,0 +1,29 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="circuit-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="transparent"/>
+      <path d="M0,30 L60,30" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+      <path d="M30,0 L30,60" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+      <circle cx="30" cy="30" r="3" fill="rgba(139,92,246,0.3)"/>
+      <rect x="25" y="25" width="10" height="10" fill="rgba(14,165,233,0.1)" stroke="rgba(14,165,233,0.3)" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="tech-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(59,130,246,0.1);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(139,92,246,0.05);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#circuit-pattern)"/>
+  <rect width="600" height="400" fill="url(#tech-glow)"/>
+  
+  <!-- Circuit nodes -->
+  <circle cx="100" cy="80" r="8" fill="rgba(59,130,246,0.4)"/>
+  <circle cx="200" cy="120" r="6" fill="rgba(139,92,246,0.4)"/>
+  <circle cx="300" cy="200" r="10" fill="rgba(14,165,233,0.4)"/>
+  <circle cx="400" cy="150" r="7" fill="rgba(59,130,246,0.4)"/>
+  <circle cx="500" cy="250" r="5" fill="rgba(139,92,246,0.4)"/>
+  
+  <!-- Connection lines -->
+  <path d="M100,80 L200,120 L300,200 L400,150 L500,250" stroke="rgba(59,130,246,0.3)" stroke-width="2" fill="none"/>
+  <path d="M200,120 L300,200 L400,150" stroke="rgba(139,92,246,0.3)" stroke-width="1.5" fill="none"/>
+</svg>

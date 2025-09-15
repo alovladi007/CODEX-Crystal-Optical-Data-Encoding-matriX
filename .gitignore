@@ -117,6 +117,9 @@ venv.bak/
 archives/
 *.crystal
 
+# Allow public images
+!public/images/
+
 # IDE
 .vscode/
 .idea/

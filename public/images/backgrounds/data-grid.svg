@@ -1,0 +1,26 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="data-grid" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="transparent"/>
+      <path d="M0,25 L50,25" stroke="rgba(14,165,233,0.2)" stroke-width="0.5"/>
+      <path d="M25,0 L25,50" stroke="rgba(14,165,233,0.2)" stroke-width="0.5"/>
+      <circle cx="25" cy="25" r="1" fill="rgba(59,130,246,0.4)"/>
+    </pattern>
+    <radialGradient id="data-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(14,165,233,0.15);stop-opacity:1" />
+      <stop offset="70%" style="stop-color:rgba(59,130,246,0.05);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#data-grid)"/>
+  <rect width="500" height="500" fill="url(#data-glow)"/>
+  
+  <!-- Data points -->
+  <circle cx="100" cy="100" r="3" fill="rgba(14,165,233,0.6)"/>
+  <circle cx="200" cy="150" r="2" fill="rgba(59,130,246,0.6)"/>
+  <circle cx="300" cy="200" r="4" fill="rgba(139,92,246,0.6)"/>
+  <circle cx="400" cy="120" r="2.5" fill="rgba(14,165,233,0.6)"/>
+  <circle cx="150" cy="300" r="3.5" fill="rgba(59,130,246,0.6)"/>
+  <circle cx="350" cy="350" r="2" fill="rgba(139,92,246,0.6)"/>
+  <circle cx="250" cy="400" r="3" fill="rgba(14,165,233,0.6)"/>
+</svg>
