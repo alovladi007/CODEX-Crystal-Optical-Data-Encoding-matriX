@@ -92,7 +92,7 @@ export function Features() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/backgrounds/data-grid.svg)',
+            backgroundImage: 'url(/images/data/modern-data-bg.svg)',
             backgroundSize: 'cover'
           }}
         />

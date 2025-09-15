@@ -1,0 +1,74 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Modern data gradients -->
+    <radialGradient id="data-radial" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.3" />
+      <stop offset="30%" style="stop-color:#764ba2;stop-opacity:0.2" />
+      <stop offset="60%" style="stop-color:#f093fb;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="data-linear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.2" />
+      <stop offset="50%" style="stop-color:#00f2fe;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#43e97b;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <!-- Modern filters -->
+    <filter id="data-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12"/>
+    </filter>
+    
+    <filter id="data-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5"/>
+      <feColorMatrix type="matrix" values="0 1 0 0 0.2  0 0 1 0 0.1  1 0 0 0 0.1  0 0 0 1 0"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#0f0f23"/>
+  <rect width="1920" height="1080" fill="url(#data-radial)"/>
+  <rect width="1920" height="1080" fill="url(#data-linear)"/>
+  
+  <!-- Abstract data shapes -->
+  <ellipse cx="400" cy="200" rx="150" ry="80" fill="rgba(79,172,254,0.2)" filter="url(#data-blur)"/>
+  <ellipse cx="1200" cy="300" rx="200" ry="100" fill="rgba(0,242,254,0.15)" filter="url(#data-blur)"/>
+  <ellipse cx="600" cy="700" rx="180" ry="120" fill="rgba(67,233,123,0.2)" filter="url(#data-blur)"/>
+  <ellipse cx="1500" cy="600" rx="160" ry="90" fill="rgba(255,107,107,0.15)" filter="url(#data-blur)"/>
+  
+  <!-- Modern data points -->
+  <circle cx="200" cy="150" r="4" fill="#4facfe" opacity="0.8"/>
+  <circle cx="400" cy="300" r="6" fill="#00f2fe" opacity="0.7"/>
+  <circle cx="600" cy="200" r="5" fill="#43e97b" opacity="0.6"/>
+  <circle cx="800" cy="400" r="7" fill="#ff6b6b" opacity="0.8"/>
+  <circle cx="1000" cy="250" r="4" fill="#4ecdc4" opacity="0.5"/>
+  <circle cx="1200" cy="500" r="8" fill="#45b7d1" opacity="0.7"/>
+  <circle cx="1400" cy="350" r="5" fill="#667eea" opacity="0.6"/>
+  <circle cx="1600" cy="450" r="6" fill="#764ba2" opacity="0.8"/>
+  <circle cx="1800" cy="300" r="4" fill="#f093fb" opacity="0.7"/>
+  
+  <!-- Data connection lines -->
+  <path d="M200,150 L400,300 L600,200 L800,400 L1000,250" stroke="rgba(79,172,254,0.3)" stroke-width="2" fill="none" filter="url(#data-glow)"/>
+  <path d="M1000,250 L1200,500 L1400,350 L1600,450 L1800,300" stroke="rgba(0,242,254,0.3)" stroke-width="1.5" fill="none" filter="url(#data-glow)"/>
+  <path d="M400,300 L800,400 L1200,500 L1600,450" stroke="rgba(67,233,123,0.3)" stroke-width="1" fill="none" filter="url(#data-glow)"/>
+  
+  <!-- Modern grid overlay -->
+  <defs>
+    <pattern id="data-grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M0,30 L60,30 M30,0 L30,60" stroke="rgba(79,172,254,0.08)" stroke-width="0.5"/>
+      <circle cx="30" cy="30" r="0.5" fill="rgba(79,172,254,0.2)"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#data-grid)"/>
+  
+  <!-- Floating data elements -->
+  <rect x="100" y="100" width="8" height="8" rx="2" fill="#4facfe" opacity="0.6" transform="rotate(45 104 104)"/>
+  <rect x="300" y="200" width="10" height="10" rx="2" fill="#00f2fe" opacity="0.7" transform="rotate(45 305 205)"/>
+  <rect x="500" y="150" width="6" height="6" rx="1" fill="#43e97b" opacity="0.8" transform="rotate(45 503 153)"/>
+  <rect x="700" y="300" width="12" height="12" rx="3" fill="#ff6b6b" opacity="0.5" transform="rotate(45 706 306)"/>
+  <rect x="900" y="250" width="8" height="8" rx="2" fill="#4ecdc4" opacity="0.6" transform="rotate(45 904 254)"/>
+  <rect x="1100" y="400" width="10" height="10" rx="2" fill="#45b7d1" opacity="0.7" transform="rotate(45 1105 405)"/>
+  <rect x="1300" y="350" width="6" height="6" rx="1" fill="#667eea" opacity="0.8" transform="rotate(45 1303 353)"/>
+  <rect x="1500" y="500" width="8" height="8" rx="2" fill="#764ba2" opacity="0.6" transform="rotate(45 1504 504)"/>
+  <rect x="1700" y="200" width="10" height="10" rx="2" fill="#f093fb" opacity="0.7" transform="rotate(45 1705 205)"/>
+</svg>

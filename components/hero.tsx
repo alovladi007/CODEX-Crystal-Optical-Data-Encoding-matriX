@@ -29,7 +29,7 @@ export function Hero() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/hero/crystal-hero.svg)',
+            backgroundImage: 'url(/images/hero/modern-hero-bg.svg)',
             backgroundSize: 'cover'
           }}
         />

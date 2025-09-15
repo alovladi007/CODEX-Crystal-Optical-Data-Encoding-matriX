@@ -1,0 +1,66 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Modern tech gradients -->
+    <linearGradient id="tech-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.4" />
+      <stop offset="25%" style="stop-color:#764ba2;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#f093fb;stop-opacity:0.2" />
+      <stop offset="75%" style="stop-color:#f5576c;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0" />
+    </linearGradient>
+    
+    <radialGradient id="tech-accent" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#00f2fe;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Modern filters -->
+    <filter id="tech-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15"/>
+    </filter>
+    
+    <filter id="tech-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+      <feColorMatrix type="matrix" values="0 0 1 0 0.3  0 1 0 0 0.2  1 0 0 0 0.1  0 0 0 1 0"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+  <rect width="1920" height="1080" fill="url(#tech-primary)"/>
+  
+  <!-- Abstract tech shapes -->
+  <rect x="100" y="100" width="300" height="200" rx="20" fill="url(#tech-accent)" filter="url(#tech-blur)" opacity="0.4"/>
+  <rect x="1200" y="200" width="400" height="150" rx="25" fill="url(#tech-accent)" filter="url(#tech-blur)" opacity="0.3"/>
+  <rect x="500" y="600" width="250" height="300" rx="30" fill="url(#tech-accent)" filter="url(#tech-blur)" opacity="0.5"/>
+  
+  <!-- Modern circuit patterns -->
+  <path d="M200,300 Q400,200 600,300 T1000,300" stroke="rgba(79,172,254,0.4)" stroke-width="3" fill="none" filter="url(#tech-glow)"/>
+  <path d="M300,500 Q500,400 700,500 T1100,500" stroke="rgba(0,242,254,0.3)" stroke-width="2" fill="none" filter="url(#tech-glow)"/>
+  <path d="M100,700 Q300,600 500,700 T900,700" stroke="rgba(67,233,123,0.4)" stroke-width="2.5" fill="none" filter="url(#tech-glow)"/>
+  
+  <!-- Floating tech elements -->
+  <circle cx="150" cy="150" r="6" fill="#4facfe" opacity="0.8"/>
+  <circle cx="300" cy="250" r="8" fill="#00f2fe" opacity="0.7"/>
+  <circle cx="500" cy="180" r="5" fill="#43e97b" opacity="0.6"/>
+  <circle cx="800" cy="220" r="7" fill="#ff6b6b" opacity="0.8"/>
+  <circle cx="1200" cy="300" r="9" fill="#4ecdc4" opacity="0.5"/>
+  <circle cx="1500" cy="400" r="6" fill="#45b7d1" opacity="0.7"/>
+  <circle cx="1800" cy="500" r="8" fill="#667eea" opacity="0.6"/>
+  
+  <!-- Modern grid overlay -->
+  <defs>
+    <pattern id="tech-grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0,40 L80,40 M40,0 L40,80" stroke="rgba(79,172,254,0.1)" stroke-width="0.5"/>
+      <circle cx="40" cy="40" r="1" fill="rgba(79,172,254,0.2)"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#tech-grid)"/>
+  
+  <!-- Abstract data flow lines -->
+  <path d="M0,200 L1920,200" stroke="rgba(79,172,254,0.1)" stroke-width="1" stroke-dasharray="10,20"/>
+  <path d="M0,400 L1920,400" stroke="rgba(0,242,254,0.1)" stroke-width="1" stroke-dasharray="15,25"/>
+  <path d="M0,600 L1920,600" stroke="rgba(67,233,123,0.1)" stroke-width="1" stroke-dasharray="20,30"/>
+  <path d="M0,800 L1920,800" stroke="rgba(255,107,107,0.1)" stroke-width="1" stroke-dasharray="12,18"/>
+</svg>
