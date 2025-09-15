@@ -129,7 +129,7 @@ def demo():
             
             # Create sample data
             sample_dir = temp_path / 'sample'
-            sample_dir.mkdir()
+            sample_dir.mkdir()he images::
             
             (sample_dir / 'demo.txt').write_text(
                 "This is a Crystal Archive demo!\n"
