@@ -51,15 +51,8 @@ const teamMembers = [
 export function Team() {
   return (
     <section id="team" className="section relative overflow-hidden">
-      {/* Real Tech Team Background */}
+      {/* Team Background Effects */}
       <div className="absolute inset-0 opacity-15">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/people/real-tech-team-bg.svg)',
-            backgroundSize: 'cover'
-          }}
-        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(135deg,_transparent_0%,_rgba(59,130,246,0.05)_25%,_transparent_50%,_rgba(139,92,246,0.05)_75%,_transparent_100%)]" />
       </div>
