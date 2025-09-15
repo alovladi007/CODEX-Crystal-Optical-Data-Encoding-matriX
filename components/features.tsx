@@ -92,7 +92,7 @@ export function Features() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/data/modern-data-bg.svg)',
+            backgroundImage: 'url(/images/data/real-analytics-bg.svg)',
             backgroundSize: 'cover'
           }}
         />

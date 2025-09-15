@@ -1,0 +1,72 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Realistic data center gradient overlay -->
+    <linearGradient id="datacenter-overlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0.8" />
+      <stop offset="30%" style="stop-color:#1e293b;stop-opacity:0.6" />
+      <stop offset="70%" style="stop-color:#334155;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:0.2" />
+    </linearGradient>
+    
+    <!-- Blue tech glow -->
+    <radialGradient id="tech-glow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#1d4ed8;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background representing a real data center -->
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+  
+  <!-- Data center floor pattern -->
+  <rect x="0" y="800" width="1920" height="280" fill="#1a1a1a"/>
+  
+  <!-- Server racks representation -->
+  <rect x="100" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="200" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="300" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="400" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="500" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="600" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="700" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="800" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="900" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1000" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1100" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1200" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1300" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1400" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1500" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1600" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1700" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  <rect x="1800" y="200" width="60" height="600" fill="#2a2a2a" rx="5"/>
+  
+  <!-- Server lights -->
+  <circle cx="130" cy="250" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="300" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="350" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="400" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="450" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="500" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="550" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="600" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="650" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="700" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="130" cy="750" r="3" fill="#00ff00" opacity="0.8"/>
+  
+  <!-- Network cables -->
+  <path d="M100,400 Q200,350 300,400 T500,400 T700,400 T900,400 T1100,400 T1300,400 T1500,400 T1700,400" 
+        stroke="#333" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M100,500 Q200,450 300,500 T500,500 T700,500 T900,500 T1100,500 T1300,500 T1500,500 T1700,500" 
+        stroke="#333" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M100,600 Q200,550 300,600 T500,600 T700,600 T900,600 T1100,600 T1300,600 T1500,600 T1700,600" 
+        stroke="#333" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <!-- Overlay gradients -->
+  <rect width="1920" height="1080" fill="url(#datacenter-overlay)"/>
+  <rect width="1920" height="1080" fill="url(#tech-glow)"/>
+  
+  <!-- Text overlay area -->
+  <rect x="0" y="0" width="1920" height="400" fill="rgba(15,23,42,0.7)"/>
+</svg>

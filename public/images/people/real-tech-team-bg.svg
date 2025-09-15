@@ -1,0 +1,174 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Professional office gradient -->
+    <linearGradient id="office-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0.9" />
+      <stop offset="30%" style="stop-color:#1e293b;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#334155;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- Modern office pattern -->
+    <pattern id="office-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="#0a0a0a"/>
+      <circle cx="50" cy="50" r="2" fill="#3b82f6" opacity="0.3"/>
+      <circle cx="150" cy="50" r="2" fill="#3b82f6" opacity="0.3"/>
+      <circle cx="50" cy="150" r="2" fill="#3b82f6" opacity="0.3"/>
+      <circle cx="150" cy="150" r="2" fill="#3b82f6" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+  <rect width="1920" height="1080" fill="url(#office-bg)"/>
+  <rect width="1920" height="1080" fill="url(#office-pattern)" opacity="0.1"/>
+  
+  <!-- Office environment -->
+  <rect x="0" y="600" width="1920" height="480" fill="#1a1a1a"/>
+  
+  <!-- Workstations -->
+  <rect x="100" y="300" width="200" height="120" fill="#2a2a2a" rx="5"/>
+  <rect x="120" y="320" width="160" height="80" fill="#0f0f0f" rx="3"/>
+  <rect x="130" y="330" width="140" height="60" fill="#1a1a1a" rx="2"/>
+  
+  <!-- Monitor screens -->
+  <rect x="140" y="340" width="60" height="40" fill="#3b82f6" opacity="0.3" rx="2"/>
+  <rect x="210" y="340" width="60" height="40" fill="#10b981" opacity="0.3" rx="2"/>
+  
+  <!-- Keyboard -->
+  <rect x="150" y="390" width="120" height="20" fill="#333" rx="2"/>
+  
+  <!-- Second workstation -->
+  <rect x="400" y="300" width="200" height="120" fill="#2a2a2a" rx="5"/>
+  <rect x="420" y="320" width="160" height="80" fill="#0f0f0f" rx="3"/>
+  <rect x="430" y="330" width="140" height="60" fill="#1a1a1a" rx="2"/>
+  
+  <rect x="440" y="340" width="60" height="40" fill="#f59e0b" opacity="0.3" rx="2"/>
+  <rect x="510" y="340" width="60" height="40" fill="#ef4444" opacity="0.3" rx="2"/>
+  
+  <rect x="450" y="390" width="120" height="20" fill="#333" rx="2"/>
+  
+  <!-- Third workstation -->
+  <rect x="700" y="300" width="200" height="120" fill="#2a2a2a" rx="5"/>
+  <rect x="720" y="320" width="160" height="80" fill="#0f0f0f" rx="3"/>
+  <rect x="730" y="330" width="140" height="60" fill="#1a1a1a" rx="2"/>
+  
+  <rect x="740" y="340" width="60" height="40" fill="#8b5cf6" opacity="0.3" rx="2"/>
+  <rect x="810" y="340" width="60" height="40" fill="#06b6d4" opacity="0.3" rx="2"/>
+  
+  <rect x="750" y="390" width="120" height="20" fill="#333" rx="2"/>
+  
+  <!-- Team collaboration area -->
+  <rect x="1000" y="200" width="400" height="300" fill="#1a1a1a" rx="10" stroke="#333" stroke-width="1"/>
+  <rect x="1020" y="220" width="360" height="260" fill="#0f0f0f" rx="5"/>
+  
+  <!-- Whiteboard -->
+  <rect x="1040" y="240" width="320" height="180" fill="#f8fafc" rx="5"/>
+  <rect x="1050" y="250" width="300" height="160" fill="#ffffff" rx="3"/>
+  
+  <!-- Whiteboard content -->
+  <text x="1100" y="280" fill="#1f2937" font-family="monospace" font-size="14" font-weight="bold">CODEX Crystal Archive</text>
+  <text x="1100" y="300" fill="#1f2937" font-family="monospace" font-size="12">• 5D Optical Storage</text>
+  <text x="1100" y="320" fill="#1f2937" font-family="monospace" font-size="12">• Error Correction</text>
+  <text x="1100" y="340" fill="#1f2937" font-family="monospace" font-size="12">• Data Integrity</text>
+  <text x="1100" y="360" fill="#1f2937" font-family="monospace" font-size="12">• Long-term Storage</text>
+  
+  <!-- Diagram elements -->
+  <circle cx="1200" cy="380" r="20" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="1250" cy="380" r="20" fill="#10b981" opacity="0.3"/>
+  <circle cx="1300" cy="380" r="20" fill="#f59e0b" opacity="0.3"/>
+  
+  <path d="M1200,360 Q1225,350 1250,360 T1300,360" stroke="#1f2937" stroke-width="2" fill="none"/>
+  
+  <!-- Server room view -->
+  <rect x="1500" y="200" width="300" height="300" fill="#1a1a1a" rx="10" stroke="#333" stroke-width="1"/>
+  <rect x="1520" y="220" width="260" height="260" fill="#0f0f0f" rx="5"/>
+  
+  <!-- Server racks in background -->
+  <rect x="1540" y="240" width="40" height="200" fill="#2a2a2a" rx="3"/>
+  <rect x="1590" y="240" width="40" height="200" fill="#2a2a2a" rx="3"/>
+  <rect x="1640" y="240" width="40" height="200" fill="#2a2a2a" rx="3"/>
+  <rect x="1690" y="240" width="40" height="200" fill="#2a2a2a" rx="3"/>
+  <rect x="1740" y="240" width="40" height="200" fill="#2a2a2a" rx="3"/>
+  
+  <!-- Server status lights -->
+  <circle cx="1560" cy="260" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="1560" cy="280" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="1560" cy="300" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="1560" cy="320" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="1560" cy="340" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="1560" cy="360" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="1560" cy="380" r="3" fill="#00ff00" opacity="0.8"/>
+  <circle cx="1560" cy="400" r="3" fill="#00ff00" opacity="0.8"/>
+  
+  <!-- Network cables -->
+  <path d="M1540,300 Q1590,280 1640,300 T1740,300" stroke="#333" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M1540,350 Q1590,330 1640,350 T1740,350" stroke="#333" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <!-- People silhouettes -->
+  <!-- Person 1 - Developer -->
+  <circle cx="200" cy="250" r="15" fill="#3b82f6" opacity="0.8"/>
+  <rect x="185" y="265" width="30" height="40" fill="#3b82f6" opacity="0.8" rx="15"/>
+  <rect x="175" y="275" width="20" height="30" fill="#3b82f6" opacity="0.8" rx="10"/>
+  <rect x="205" y="275" width="20" height="30" fill="#3b82f6" opacity="0.8" rx="10"/>
+  <rect x="190" y="305" width="15" height="25" fill="#3b82f6" opacity="0.8" rx="7"/>
+  <rect x="195" y="330" width="5" height="15" fill="#3b82f6" opacity="0.8" rx="2"/>
+  
+  <!-- Person 2 - Data Scientist -->
+  <circle cx="500" cy="250" r="15" fill="#10b981" opacity="0.8"/>
+  <rect x="485" y="265" width="30" height="40" fill="#10b981" opacity="0.8" rx="15"/>
+  <rect x="475" y="275" width="20" height="30" fill="#10b981" opacity="0.8" rx="10"/>
+  <rect x="505" y="275" width="20" height="30" fill="#10b981" opacity="0.8" rx="10"/>
+  <rect x="490" y="305" width="15" height="25" fill="#10b981" opacity="0.8" rx="7"/>
+  <rect x="495" y="330" width="5" height="15" fill="#10b981" opacity="0.8" rx="2"/>
+  
+  <!-- Person 3 - System Administrator -->
+  <circle cx="800" cy="250" r="15" fill="#f59e0b" opacity="0.8"/>
+  <rect x="785" y="265" width="30" height="40" fill="#f59e0b" opacity="0.8" rx="15"/>
+  <rect x="775" y="275" width="20" height="30" fill="#f59e0b" opacity="0.8" rx="10"/>
+  <rect x="805" y="275" width="20" height="30" fill="#f59e0b" opacity="0.8" rx="10"/>
+  <rect x="790" y="305" width="15" height="25" fill="#f59e0b" opacity="0.8" rx="7"/>
+  <rect x="795" y="330" width="5" height="15" fill="#f59e0b" opacity="0.8" rx="2"/>
+  
+  <!-- Person 4 - Team Lead -->
+  <circle cx="1200" cy="150" r="15" fill="#8b5cf6" opacity="0.8"/>
+  <rect x="1185" y="165" width="30" height="40" fill="#8b5cf6" opacity="0.8" rx="15"/>
+  <rect x="1175" y="175" width="20" height="30" fill="#8b5cf6" opacity="0.8" rx="10"/>
+  <rect x="1205" y="175" width="20" height="30" fill="#8b5cf6" opacity="0.8" rx="10"/>
+  <rect x="1190" y="205" width="15" height="25" fill="#8b5cf6" opacity="0.8" rx="7"/>
+  <rect x="1195" y="230" width="5" height="15" fill="#8b5cf6" opacity="0.8" rx="2"/>
+  
+  <!-- Person 5 - DevOps Engineer -->
+  <circle cx="1600" cy="150" r="15" fill="#ef4444" opacity="0.8"/>
+  <rect x="1585" y="165" width="30" height="40" fill="#ef4444" opacity="0.8" rx="15"/>
+  <rect x="1575" y="175" width="20" height="30" fill="#ef4444" opacity="0.8" rx="10"/>
+  <rect x="1605" y="175" width="20" height="30" fill="#ef4444" opacity="0.8" rx="10"/>
+  <rect x="1590" y="205" width="15" height="25" fill="#ef4444" opacity="0.8" rx="7"/>
+  <rect x="1595" y="230" width="5" height="15" fill="#ef4444" opacity="0.8" rx="2"/>
+  
+  <!-- Office furniture -->
+  <rect x="0" y="600" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="620" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="640" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="660" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="680" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="700" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="720" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="740" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="760" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="780" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="800" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="820" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="840" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="860" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="880" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="900" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="920" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="940" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="960" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="980" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="1000" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="1020" width="1920" height="20" fill="#444"/>
+  <rect x="0" y="1040" width="1920" height="20" fill="#333"/>
+  <rect x="0" y="1060" width="1920" height="20" fill="#444"/>
+</svg>

@@ -124,7 +124,7 @@ export function Technology() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/tech/modern-tech-bg.svg)',
+            backgroundImage: 'url(/images/tech/real-hardware-bg.svg)',
             backgroundSize: 'cover'
           }}
         />
