@@ -1,0 +1,49 @@
+{
+  "name": "codex-crystal-archive",
+  "version": "1.0.0",
+  "description": "Ultra-durable 5D optical data storage platform",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.88.0",
+    "@react-three/fiber": "^8.15.0",
+    "@tailwindcss/forms": "^0.5.10",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "axios": "^1.5.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.292.0",
+    "next": "^14.0.0",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.4.0",
+    "react": "^18.2.0",
+    "react-countup": "^6.4.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.0",
+    "react-hook-form": "^7.47.0",
+    "react-hot-toast": "^2.6.0",
+    "react-intersection-observer": "^9.5.0",
+    "react-particles": "^2.12.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^3.3.0",
+    "three": "^0.180.0",
+    "tsparticles": "^2.12.0",
+    "typescript": "^5.0.0",
+    "zod": "^4.1.8",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  }
+}
