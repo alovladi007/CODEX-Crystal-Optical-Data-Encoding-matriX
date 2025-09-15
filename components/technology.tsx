@@ -119,25 +119,42 @@ const technicalSpecs = [
 export function Technology() {
   return (
     <section id="technology" className="section relative overflow-hidden">
-      {/* Real Data Center Background with Effects */}
-      <div className="absolute inset-0 opacity-40">
+      {/* Real Data Center Background with Advanced Effects */}
+      <div className="absolute inset-0 opacity-50">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
           style={{
             backgroundImage: 'url(/images/tech/real-datacenter-bg.jpg)',
             backgroundSize: 'cover',
-            filter: 'hue-rotate(-20deg) saturate(1.3) contrast(1.2) brightness(0.7)'
+            backgroundPosition: 'center center',
+            backgroundAttachment: 'fixed',
+            filter: 'hue-rotate(-15deg) saturate(1.5) contrast(1.4) brightness(0.65) blur(0.3px)',
+            transform: 'scale(1.02)',
+            animation: 'datacenter-pulse 15s ease-in-out infinite'
           }}
         />
-        {/* Data center enhancement overlays */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-cyan-500/15 to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(59,130,246,0.1)_25%,_rgba(14,165,233,0.1)_50%,_rgba(59,130,246,0.1)_75%,_transparent_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.3)_0%,_transparent_30%,_transparent_70%,_rgba(0,0,0,0.3)_100%)]" />
-        {/* Tech glow effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(59,130,246,0.15)_0%,_transparent_40%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(14,165,233,0.15)_0%,_transparent_40%)]" />
-        {/* Server rack lighting simulation */}
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(0,255,0,0.05)_10%,_transparent_20%,_rgba(0,255,0,0.05)_30%,_transparent_40%,_rgba(0,255,0,0.05)_50%,_transparent_60%,_rgba(0,255,0,0.05)_70%,_transparent_80%,_rgba(0,255,0,0.05)_90%,_transparent_100%)] animate-server-lights" />
+        
+        {/* Realistic data center enhancement overlays */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/30 via-cyan-500/20 to-transparent animate-datacenter-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(59,130,246,0.15)_25%,_rgba(14,165,233,0.15)_50%,_rgba(59,130,246,0.15)_75%,_transparent_100%)] animate-datacenter-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.4)_0%,_transparent_30%,_transparent_70%,_rgba(0,0,0,0.4)_100%)]" />
+        
+        {/* Realistic tech glow effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(59,130,246,0.2)_0%,_transparent_50%)] animate-datacenter-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(14,165,233,0.2)_0%,_transparent_50%)] animate-datacenter-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,255,255,0.1)_0%,_transparent_60%)] animate-datacenter-pulse" style={{ animationDelay: '3s' }} />
+        
+        {/* Realistic server rack lighting simulation */}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(0,255,0,0.08)_10%,_transparent_20%,_rgba(0,255,0,0.08)_30%,_transparent_40%,_rgba(0,255,0,0.08)_50%,_transparent_60%,_rgba(0,255,0,0.08)_70%,_transparent_80%,_rgba(0,255,0,0.08)_90%,_transparent_100%)] animate-server-lights" />
+        
+        {/* Network activity indicators */}
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,_transparent_0%,_rgba(0,255,255,0.05)_25%,_transparent_50%,_rgba(0,255,255,0.05)_75%,_transparent_100%)] animate-server-lights" style={{ animationDelay: '1s' }} />
+        
+        {/* Data flow visualization */}
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,_transparent_0%,_rgba(59,130,246,0.05)_25%,_transparent_50%,_rgba(14,165,233,0.05)_75%,_transparent_100%)] animate-server-lights" style={{ animationDelay: '2s' }} />
+        
+        {/* Realistic depth and atmosphere */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(0,0,0,0.2)_100%)]" />
       </div>
       
       {/* Circuit Pattern Overlay */}

@@ -263,38 +263,119 @@ a {
   animation: crystal-refract 8s ease-in-out infinite;
 }
 
+/* Crystal floating animation */
+@keyframes crystal-float {
+  0%, 100% {
+    transform: scale(1.05) translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.08) translateY(-5px) rotate(1deg);
+  }
+  50% {
+    transform: scale(1.05) translateY(-10px) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.08) translateY(-5px) rotate(-1deg);
+  }
+}
+
+.animate-crystal-float {
+  animation: crystal-float 20s ease-in-out infinite;
+}
+
 /* Data center pulse animation */
 @keyframes datacenter-pulse {
   0%, 100% {
     opacity: 0.05;
-    transform: scale(1);
+    transform: scale(1.02) translateY(0px);
+  }
+  25% {
+    opacity: 0.1;
+    transform: scale(1.03) translateY(-2px);
   }
   50% {
     opacity: 0.15;
-    transform: scale(1.02);
+    transform: scale(1.04) translateY(-4px);
+  }
+  75% {
+    opacity: 0.1;
+    transform: scale(1.03) translateY(-2px);
   }
 }
 
 .animate-datacenter-pulse {
-  animation: datacenter-pulse 4s ease-in-out infinite;
+  animation: datacenter-pulse 15s ease-in-out infinite;
 }
 
 /* Server rack lighting animation */
 @keyframes server-lights {
   0%, 100% {
     opacity: 0.05;
+    transform: translateX(0px);
   }
   25% {
     opacity: 0.1;
+    transform: translateX(2px);
   }
   50% {
     opacity: 0.15;
+    transform: translateX(0px);
   }
   75% {
     opacity: 0.1;
+    transform: translateX(-2px);
   }
 }
 
 .animate-server-lights {
   animation: server-lights 3s ease-in-out infinite;
+}
+
+/* Realistic parallax effect */
+@keyframes parallax-slow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.01);
+  }
+}
+
+.animate-parallax-slow {
+  animation: parallax-slow 25s ease-in-out infinite;
+}
+
+/* Realistic breathing effect */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+}
+
+.animate-breathe {
+  animation: breathe 8s ease-in-out infinite;
+}
+
+/* Realistic shimmer effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 4s ease-in-out infinite;
 }
