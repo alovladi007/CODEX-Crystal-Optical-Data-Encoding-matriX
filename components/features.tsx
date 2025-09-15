@@ -87,15 +87,8 @@ const additionalFeatures = [
 export function Features() {
   return (
     <section id="features" className="section relative overflow-hidden">
-      {/* Data Visualization Background */}
+      {/* Data Visualization Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/data/real-analytics-bg.svg)',
-            backgroundSize: 'cover'
-          }}
-        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(135deg,_transparent_0%,_rgba(14,165,233,0.05)_25%,_transparent_50%,_rgba(59,130,246,0.05)_75%,_transparent_100%)]" />
       </div>
