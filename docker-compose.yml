@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  crystal-archive-web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./downloads:/app/downloads
+    environment:
+      - FLASK_ENV=production
+    restart: unless-stopped
+
+  crystal-archive-api:
+    build: .
+    command: python -m crystal_archive.cli.main
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped

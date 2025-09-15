@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "created": "2025-09-15T01:28:33.610843",
+  "profile": "A",
+  "encoding": {
+    "profile_params": {
+      "name": "Conservative",
+      "voxel_mode": "3bit",
+      "ldpc_rate": 0.75,
+      "rs_overhead": 0.2,
+      "interleave_span": 10000,
+      "interleave_depth": 16,
+      "compression": "zstd",
+      "compression_level": 6
+    },
+    "compression": {
+      "codec": "zstd",
+      "info": {
+        "codec": "zstd",
+        "level": 6,
+        "version": [
+          1,
+          5,
+          2
+        ],
+        "original_size": 694,
+        "compressed_size": 500,
+        "ratio": 0.7204610951008645
+      }
+    },
+    "ecc": {
+      "ldpc": {
+        "n": 1024,
+        "k": 768,
+        "rate": 0.75
+      },
+      "reed_solomon": {
+        "n": 255,
+        "k": 223,
+        "overhead": 0.2
+      }
+    },
+    "voxel": {
+      "mode": "3bit",
+      "bits_per_voxel": 3,
+      "orientations": 4,
+      "retardance_levels": 2,
+      "gray_codes": {}
+    },
+    "interleaving": {
+      "seed": 42,
+      "span": 10000,
+      "depth": 16
+    }
+  },
+  "integrity": {
+    "merkle_root": "d95290bb5139d6cae8ea14cb78b1b592d3510f17cc49a50f39df5185e38e617e",
+    "manifest_hash": "fe448b84e413063f5e2be48f87d2062bca71ecf2ac5664ee8b69f53f3f4f4651"
+  },
+  "files": [
+    {
+      "path": "README.txt",
+      "size": 327,
+      "sha256": "14213ef41dcbe5a000ba870e7e63461fe80f0c5ab74e71552891dabe8d9b69dc"
+    },
+    {
+      "path": "numbers.csv",
+      "size": 131,
+      "sha256": "ed2ff8cf79ca834d753a2d0fe77ec0b8ea1742e8780ae83e09b4e0cd3e1642d5"
+    },
+    {
+      "path": "poem.txt",
+      "size": 157,
+      "sha256": "b0f641a896bdf158d7711ac47edc1b35e3fd157df83bd7fefe5ede1c93a30d59"
+    }
+  ],
+  "instructions": "\nCrystal Archive Decoding Instructions\n======================================\n\n1. Optical Calibration\n   - Use primer targets for focus lock\n   - Calibrate polarization angle to 0\u00b0\n   - Set gain using referee pages\n\n2. Symbol Decoding\n   - Read voxel orientation (angle) and retardance\n   - Use Gray code tables in manifest\n   - Apply soft-decision thresholds if available\n\n3. Error Correction\n   - Deinterleave using seed from manifest\n   - Apply LDPC soft-decision decoding\n   - Use Reed-Solomon for erasure recovery\n\n4. Data Recovery\n   - Verify Merkle root\n   - Decompress using specified codec\n   - Verify file SHA-256 hashes\n\nSee full specification in docs/SPEC.md\n",
+  "geometry": {
+    "tiles_x": 8,
+    "tiles_y": 8,
+    "planes": 1,
+    "total_tiles": 64
+  }
+}

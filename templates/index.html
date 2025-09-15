@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Archive - 5D Optical Data Storage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .tab {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #7f8c8d;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            color: #3498db;
+            border-bottom-color: #3498db;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .upload-area {
+            border: 3px dashed #bdc3c7;
+            border-radius: 15px;
+            padding: 60px;
+            text-align: center;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover {
+            border-color: #3498db;
+            background: #e3f2fd;
+        }
+        
+        .upload-area.dragover {
+            border-color: #27ae60;
+            background: #e8f5e8;
+        }
+        
+        .upload-icon {
+            font-size: 4em;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        }
+        
+        .btn-info {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border: 2px solid #ecf0f1;
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Crystal Archive</h1>
+            <p>Ultra-durable 5D optical data storage for millennia</p>
+        </div>
+        
+        <div class="content">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('encode')">📦 Encode Files</button>
+                <button class="tab" onclick="showTab('decode')">🔓 Decode Archive</button>
+                <button class="tab" onclick="showTab('demo')">🎯 Demo</button>
+            </div>
+            
+            <!-- Encode Tab -->
+            <div id="encode" class="tab-content active">
+                <h2>Encode Files to Crystal Format</h2>
+                <p>Upload your files to convert them into ultra-durable 5D optical crystal storage.</p>
+                
+                <form id="encodeForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="files">Select Files to Encode:</label>
+                        <div class="upload-area" onclick="document.getElementById('files').click()">
+                            <div class="upload-icon">📁</div>
+                            <p>Click to select files or drag and drop</p>
+                            <input type="file" id="files" name="files" multiple style="display: none;">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profile">Encoding Profile:</label>
+                        <select id="profile" name="profile">
+                            <option value="A">Profile A (Conservative) - 3 bits/voxel, 99.9999% recovery</option>
+                            <option value="B">Profile B (Aggressive) - 5 bits/voxel, higher density</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn">🔮 Encode to Crystal</button>
+                </form>
+            </div>
+            
+            <!-- Decode Tab -->
+            <div id="decode" class="tab-content">
+                <h2>Decode Crystal Archive</h2>
+                <p>Upload a crystal archive to decode it back to original files.</p>
+                
+                <form id="decodeForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="archive">Select Crystal Archive:</label>
+                        <div class="upload-area" onclick="document.getElementById('archive').click()">
+                            <div class="upload-icon">💎</div>
+                            <p>Click to select crystal archive or drag and drop</p>
+                            <input type="file" id="archive" name="archive" accept=".zip" style="display: none;">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">🔓 Decode Archive</button>
+                </form>
+            </div>
+            
+            <!-- Demo Tab -->
+            <div id="demo" class="tab-content">
+                <h2>Live Demo</h2>
+                <p>See Crystal Archive in action with sample data.</p>
+                
+                <button onclick="runDemo()" class="btn btn-info">🎯 Run Demo</button>
+                <div id="demoResult"></div>
+            </div>
+            
+            <div id="status" class="status"></div>
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Processing your request...</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Ultra-Durable</h3>
+                    <p>Designed to last for millennia with advanced error correction</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Self-Describing</h3>
+                    <p>Complete decoding instructions embedded in every archive</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💎</div>
+                    <h3>5D Optical</h3>
+                    <p>Uses orientation and retardance for maximum data density</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+        
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+        }
+        
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+        }
+        
+        // Encode form submission
+        document.getElementById('encodeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            const files = document.getElementById('files').files;
+            const profile = document.getElementById('profile').value;
+            
+            if (files.length === 0) {
+                showStatus('Please select files to encode', 'error');
+                return;
+            }
+            
+            for (let file of files) {
+                formData.append('files', file);
+            }
+            formData.append('profile', profile);
+            
+            showLoading(true);
+            
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'crystal_archive.zip';
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    
+                    showStatus('Files successfully encoded to crystal format!', 'success');
+                } else {
+                    const error = await response.json();
+                    showStatus(`Encoding failed: ${error.error}`, 'error');
+                }
+            } catch (error) {
+                showStatus(`Error: ${error.message}`, 'error');
+            } finally {
+                showLoading(false);
+            }
+        });
+        
+        // Decode form submission
+        document.getElementById('decodeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            const archive = document.getElementById('archive').files[0];
+            
+            if (!archive) {
+                showStatus('Please select a crystal archive to decode', 'error');
+                return;
+            }
+            
+            formData.append('archive', archive);
+            
+            showLoading(true);
+            
+            try {
+                const response = await fetch('/decode', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'decoded_files.zip';
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    
+                    showStatus('Archive successfully decoded!', 'success');
+                } else {
+                    const error = await response.json();
+                    showStatus(`Decoding failed: ${error.error}`, 'error');
+                }
+            } catch (error) {
+                showStatus(`Error: ${error.message}`, 'error');
+            } finally {
+                showLoading(false);
+            }
+        });
+        
+        // Demo function
+        async function runDemo() {
+            showLoading(true);
+            
+            try {
+                const response = await fetch('/demo');
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('demoResult').innerHTML = `
+                        <div class="status success">
+                            <h3>Demo Successful!</h3>
+                            <p><strong>Profile:</strong> ${result.manifest.encoding.profile_params.name}</p>
+                            <p><strong>Files:</strong> ${result.manifest.files.length}</p>
+                            <p><strong>Merkle Root:</strong> ${result.manifest.integrity.merkle_root.substring(0, 16)}...</p>
+                            <p><strong>Compression Ratio:</strong> ${(result.manifest.encoding.compression.info.ratio * 100).toFixed(1)}%</p>
+                        </div>
+                    `;
+                } else {
+                    showStatus(`Demo failed: ${result.error}`, 'error');
+                }
+            } catch (error) {
+                showStatus(`Error: ${error.message}`, 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        // Drag and drop functionality
+        const uploadAreas = document.querySelectorAll('.upload-area');
+        
+        uploadAreas.forEach(area => {
+            area.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                area.classList.add('dragover');
+            });
+            
+            area.addEventListener('dragleave', () => {
+                area.classList.remove('dragover');
+            });
+            
+            area.addEventListener('drop', (e) => {
+                e.preventDefault();
+                area.classList.remove('dragover');
+                
+                const files = e.dataTransfer.files;
+                const fileInput = area.querySelector('input[type="file"]');
+                fileInput.files = files;
+            });
+        });
+    </script>
+</body>
+</html>
