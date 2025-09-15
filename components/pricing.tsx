@@ -105,8 +105,25 @@ const addOns = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="section bg-dark-800/30">
-      <div className="container">
+    <section id="pricing" className="section relative overflow-hidden">
+      {/* Professional Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark-800/50 via-dark-900/80 to-dark-800/50" />
+      
+      {/* Pricing Pattern Overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/5 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,_transparent_0%,_rgba(59,130,246,0.03)_25%,_transparent_50%,_rgba(139,92,246,0.03)_75%,_transparent_100%)]" />
+        <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,_transparent_0deg,_rgba(59,130,246,0.04)_90deg,_transparent_180deg,_rgba(139,92,246,0.04)_270deg,_transparent_360deg)]" />
+      </div>
+      
+      {/* Floating Price Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-1/3 w-24 h-24 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-xl animate-pulse" />
+        <div className="absolute bottom-32 right-1/4 w-16 h-16 bg-gradient-to-br from-purple-400/10 to-pink-600/10 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-10 w-12 h-12 bg-gradient-to-br from-cyan-400/10 to-blue-600/10 rounded-full blur-md animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
+      
+      <div className="container relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

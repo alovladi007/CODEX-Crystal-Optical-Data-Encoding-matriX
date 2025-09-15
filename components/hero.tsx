@@ -23,7 +23,21 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
+      
+      {/* Crystal Pattern Background */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,_transparent_0deg,_rgba(59,130,246,0.1)_60deg,_transparent_120deg,_rgba(139,92,246,0.1)_180deg,_transparent_240deg,_rgba(14,165,233,0.1)_300deg,_transparent_360deg)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,_transparent_25%,_rgba(59,130,246,0.05)_25%,_rgba(59,130,246,0.05)_50%,_transparent_50%,_transparent_75%,_rgba(139,92,246,0.05)_75%)] bg-[length:20px_20px]" />
+      </div>
+      
+      {/* Floating Crystal Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-xl animate-float" />
+        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 rounded-full blur-lg animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-md animate-float" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-gradient-to-br from-green-400/20 to-cyan-600/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }} />
+      </div>
       
       {/* Content */}
       <div className="container relative z-10">

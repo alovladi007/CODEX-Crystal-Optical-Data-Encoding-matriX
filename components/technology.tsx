@@ -118,8 +118,27 @@ const technicalSpecs = [
 
 export function Technology() {
   return (
-    <section id="technology" className="section">
-      <div className="container">
+    <section id="technology" className="section relative overflow-hidden">
+      {/* Technology Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(139,92,246,0.05)_50%,_transparent_100%)]" />
+        <div className="absolute inset-0 bg-[conic-gradient(from_180deg_at_50%_50%,_transparent_0deg,_rgba(59,130,246,0.08)_90deg,_transparent_180deg,_rgba(139,92,246,0.08)_270deg,_transparent_360deg)]" />
+      </div>
+      
+      {/* Circuit Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,_transparent_25%,_rgba(59,130,246,0.1)_25%,_rgba(59,130,246,0.1)_50%,_transparent_50%,_transparent_75%,_rgba(139,92,246,0.1)_75%)] bg-[length:40px_40px]" />
+      </div>
+      
+      {/* Floating Tech Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 right-1/4 w-16 h-16 bg-gradient-to-br from-purple-400/20 to-blue-600/20 rounded-full blur-lg animate-pulse" />
+        <div className="absolute bottom-20 left-1/3 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-purple-600/20 rounded-full blur-md animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 right-10 w-8 h-8 bg-gradient-to-br from-green-400/20 to-cyan-600/20 rounded-full blur-sm animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
+      
+      <div className="container relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

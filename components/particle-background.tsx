@@ -34,9 +34,9 @@ export function ParticleBackground() {
         this.y = Math.random() * canvasHeight;
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 2 + 1;
-        this.opacity = Math.random() * 0.5 + 0.1;
-        this.color = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
+        this.size = Math.random() * 1.5 + 0.5;
+        this.opacity = Math.random() * 0.3 + 0.05;
+        this.color = `hsl(${200 + Math.random() * 60}, 60%, 70%)`;
       }
 
       update() {
@@ -60,7 +60,7 @@ export function ParticleBackground() {
 
     const initParticles = () => {
       particles.length = 0;
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 30; i++) {
         particles.push(new Particle(canvas.width, canvas.height));
       }
     };

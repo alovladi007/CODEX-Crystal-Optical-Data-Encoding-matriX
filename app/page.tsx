@@ -30,7 +30,9 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden">
-      <ParticleBackground />
+      <div className="absolute inset-0 opacity-30">
+        <ParticleBackground />
+      </div>
       <FloatingElements />
       
       <motion.div
