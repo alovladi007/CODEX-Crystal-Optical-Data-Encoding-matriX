@@ -81,17 +81,27 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item.href, item.isAnchor)}
-                className="text-dark-300 hover:text-white transition-colors duration-200"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
+            <div className="hidden lg:flex items-center space-x-8">
+              {navItems.map((item) => (
+                item.isAnchor ? (
+                  <button
+                    key={item.name}
+                    onClick={() => handleNavClick(item.href, item.isAnchor)}
+                    className="text-dark-300 hover:text-white transition-colors duration-200"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-dark-300 hover:text-white transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              ))}
+            </div>
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -144,16 +154,27 @@ export function Navbar() {
               transition={{ duration: 0.3 }}
               className="lg:hidden border-t border-dark-700 bg-dark-900/95 backdrop-blur-md"
             >
-              <div className="py-4 space-y-4">
-                {navItems.map((item) => (
-                  <button
-                    key={item.name}
-                    onClick={() => handleNavClick(item.href, item.isAnchor)}
-                    className="block w-full text-left px-4 py-2 text-dark-300 hover:text-white hover:bg-dark-800 rounded-lg transition-colors duration-200"
-                  >
-                    {item.name}
-                  </button>
-                ))}
+                <div className="py-4 space-y-4">
+                  {navItems.map((item) => (
+                    item.isAnchor ? (
+                      <button
+                        key={item.name}
+                        onClick={() => handleNavClick(item.href, item.isAnchor)}
+                        className="block w-full text-left px-4 py-2 text-dark-300 hover:text-white hover:bg-dark-800 rounded-lg transition-colors duration-200"
+                      >
+                        {item.name}
+                      </button>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block w-full text-left px-4 py-2 text-dark-300 hover:text-white hover:bg-dark-800 rounded-lg transition-colors duration-200"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    )
+                  ))}
                 
                 <div className="px-4 pt-4 border-t border-dark-700 space-y-3">
                   <Button

@@ -137,18 +137,27 @@ export function Footer() {
                   <h3 className="text-lg font-semibold text-white mb-4 capitalize">
                     {category}
                   </h3>
-                  <ul className="space-y-3">
-                    {links.map((link) => (
-                      <li key={link.name}>
-                        <button
-                          onClick={() => handleLinkClick(link.href, link.isAnchor)}
-                          className="text-dark-300 hover:text-white transition-colors text-sm text-left"
-                        >
-                          {link.name}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="space-y-3">
+                      {links.map((link) => (
+                        <li key={link.name}>
+                          {link.isAnchor ? (
+                            <button
+                              onClick={() => handleLinkClick(link.href, link.isAnchor)}
+                              className="text-dark-300 hover:text-white transition-colors text-sm text-left"
+                            >
+                              {link.name}
+                            </button>
+                          ) : (
+                            <Link
+                              href={link.href}
+                              className="text-dark-300 hover:text-white transition-colors text-sm"
+                            >
+                              {link.name}
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
                 </motion.div>
               ))}
             </div>
