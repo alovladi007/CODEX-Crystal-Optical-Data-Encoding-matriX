@@ -119,17 +119,25 @@ const technicalSpecs = [
 export function Technology() {
   return (
     <section id="technology" className="section relative overflow-hidden">
-      {/* Technology Background Pattern */}
-      <div className="absolute inset-0 opacity-25">
+      {/* Real Data Center Background with Effects */}
+      <div className="absolute inset-0 opacity-40">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/tech/real-hardware-bg.svg)',
-            backgroundSize: 'cover'
+            backgroundImage: 'url(/images/tech/real-datacenter-bg.jpg)',
+            backgroundSize: 'cover',
+            filter: 'hue-rotate(-20deg) saturate(1.3) contrast(1.2) brightness(0.7)'
           }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(139,92,246,0.05)_50%,_transparent_100%)]" />
+        {/* Data center enhancement overlays */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-cyan-500/15 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(59,130,246,0.1)_25%,_rgba(14,165,233,0.1)_50%,_rgba(59,130,246,0.1)_75%,_transparent_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.3)_0%,_transparent_30%,_transparent_70%,_rgba(0,0,0,0.3)_100%)]" />
+        {/* Tech glow effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(59,130,246,0.15)_0%,_transparent_40%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(14,165,233,0.15)_0%,_transparent_40%)]" />
+        {/* Server rack lighting simulation */}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_0%,_rgba(0,255,0,0.05)_10%,_transparent_20%,_rgba(0,255,0,0.05)_30%,_transparent_40%,_rgba(0,255,0,0.05)_50%,_transparent_60%,_rgba(0,255,0,0.05)_70%,_transparent_80%,_rgba(0,255,0,0.05)_90%,_transparent_100%)] animate-server-lights" />
       </div>
       
       {/* Circuit Pattern Overlay */}

@@ -24,17 +24,23 @@ export function Hero() {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900" />
       
-      {/* Crystal Pattern Background */}
-      <div className="absolute inset-0 opacity-50">
+      {/* Real Crystal Background with Effects */}
+      <div className="absolute inset-0 opacity-60">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/hero/real-data-center-bg.svg)',
-            backgroundSize: 'cover'
+            backgroundImage: 'url(/images/hero/real-crystal-bg.jpg)',
+            backgroundSize: 'cover',
+            filter: 'hue-rotate(30deg) saturate(1.2) contrast(1.1) brightness(0.8)'
           }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,_transparent_0deg,_rgba(59,130,246,0.1)_60deg,_transparent_120deg,_rgba(139,92,246,0.1)_180deg,_transparent_240deg,_rgba(14,165,233,0.1)_300deg,_transparent_360deg)]" />
+        {/* Crystal enhancement overlays */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/30 via-purple-500/20 to-transparent" />
+        <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,_transparent_0deg,_rgba(59,130,246,0.15)_60deg,_transparent_120deg,_rgba(139,92,246,0.15)_180deg,_transparent_240deg,_rgba(14,165,233,0.15)_300deg,_transparent_360deg)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,_rgba(59,130,246,0.1)_0%,_transparent_25%,_rgba(139,92,246,0.1)_50%,_transparent_75%,_rgba(14,165,233,0.1)_100%)]" />
+        {/* Crystal refraction effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(255,255,255,0.1)_0%,_transparent_50%)] animate-crystal-refract" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(59,130,246,0.1)_0%,_transparent_50%)] animate-crystal-refract" style={{ animationDelay: '2s' }} />
       </div>
       
       {/* Floating Crystal Elements */}

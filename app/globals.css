@@ -238,3 +238,63 @@ a {
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+
+/* Crystal refraction animation */
+@keyframes crystal-refract {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.1;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+    opacity: 0.15;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+    opacity: 0.2;
+  }
+}
+
+.animate-crystal-refract {
+  animation: crystal-refract 8s ease-in-out infinite;
+}
+
+/* Data center pulse animation */
+@keyframes datacenter-pulse {
+  0%, 100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(1.02);
+  }
+}
+
+.animate-datacenter-pulse {
+  animation: datacenter-pulse 4s ease-in-out infinite;
+}
+
+/* Server rack lighting animation */
+@keyframes server-lights {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  75% {
+    opacity: 0.1;
+  }
+}
+
+.animate-server-lights {
+  animation: server-lights 3s ease-in-out infinite;
+}
